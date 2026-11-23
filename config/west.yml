@@ -36,6 +36,12 @@ manifest:
           - openthread
           - edtt
           - trusted-firmware-m
+    - name: zmk-feature-custom-settings
+      remote: cormoran
+      revision: main
+    - name: zmk-feature-fast-keymap
+      remote: cormoran
+      revision: main
     - name: zmk-component-bmp-boost
       remote: sekigon-gonnoc
       import: west.yml
