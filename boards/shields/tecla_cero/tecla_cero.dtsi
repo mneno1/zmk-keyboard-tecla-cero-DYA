@@ -179,6 +179,9 @@
         size = <100>;
         x = <900>;
         y = <300>;
+
+        linked-device-identifiers = "trackball_sensor", "trackball_button";
+        linked-subsystems = "zmk__trackball", "zmk__pointing_buttons";
     };
 
     /*
