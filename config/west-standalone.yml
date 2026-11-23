@@ -4,6 +4,5 @@ manifest:
   self:
     path: config
     import:
-#      file: west-dependency.yml
-      file: west.yml
+      file: west-dependency.yml
       path-prefix: dependencies
