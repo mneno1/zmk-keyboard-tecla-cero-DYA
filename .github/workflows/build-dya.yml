@@ -40,10 +40,6 @@ jobs:
           west topdir
           west list
 
-#      - name: Build
-#        run: |
-#          west zmk-build -d build -q
-
       - name: Debug workspace
         run: |
           west list
@@ -55,13 +51,21 @@ jobs:
           ls dependencies/zephyr
           ls dependencies/zephyr/soc
     
-      - name: Test build settings_reset
+      - name: Check west commands
         run: |
-          west build -p always \
-          -s dependencies/zmk/app \
-          -b bmp_boost \
-          -- \
-          -DSHIELD=settings_reset
+          west help
+    
+      - name: Build
+        run: |
+          west zmk-build -d build -q
+
+#      - name: Test build settings_reset
+#          run: |
+#            west build -p always \
+#            -s dependencies/zmk/app \
+#            -b bmp_boost \
+#            -- \
+#            -DSHIELD=settings_reset
           
       - name: Copy artifacts
         shell: sh -x {0}
