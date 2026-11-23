@@ -47,7 +47,7 @@ jobs:
       - name: Test build settings_reset
         run: |
           west build -p always \
-          -s zmk/app \
+          -s dependencies/zmk/app \
           -b bmp_boost \
           -- \
           -DSHIELD=settings_reset
