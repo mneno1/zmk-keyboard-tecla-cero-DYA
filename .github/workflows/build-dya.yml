@@ -35,25 +35,25 @@ jobs:
           west update --narrow
           west zephyr-export
 
-      - name: Debug west
-        run: |
-          west topdir
-          west list
+#      - name: Debug west
+#        run: |
+#          west topdir
+#          west list
 
-      - name: Debug workspace
-        run: |
-          west list
-          find dependencies -name module.yml
-          find dependencies -name Kconfig | head -100
+#      - name: Debug workspace
+#        run: |
+#          west list
+#          find dependencies -name module.yml
+#          find dependencies -name Kconfig | head -100
 
-      - name: Debug zephyr
-        run: |
-          ls dependencies/zephyr
-          ls dependencies/zephyr/soc
+#      - name: Debug zephyr
+#        run: |
+#          ls dependencies/zephyr
+#          ls dependencies/zephyr/soc
     
-      - name: Check west commands
-        run: |
-          west help
+#      - name: Check west commands
+#        run: |
+#          west help
     
       - name: Build
         run: |
