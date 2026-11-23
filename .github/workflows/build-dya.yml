@@ -39,10 +39,18 @@ jobs:
         run: |
           west list
 
-      - name: Build
-        run: |
-          west zmk-build -d build -q
+#      - name: Build
+#        run: |
+#          west zmk-build -d build -q
 
+      - name: Test build settings_reset
+        run: |
+          west build -p always \
+          -s zmk/app \
+          -b bmp_boost \
+          -- \
+          -DSHIELD=settings_reset
+          
       - name: Copy artifacts
         shell: sh -x {0}
         run: |
