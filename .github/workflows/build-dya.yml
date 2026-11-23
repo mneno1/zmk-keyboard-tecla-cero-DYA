@@ -2,8 +2,8 @@ name: Build ZMK firmware
 
 on:
   push:
-    branches:
-      - main
+    tags-ignore:
+      - "v*"
   pull_request:
   workflow_dispatch:
 
