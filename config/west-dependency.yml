@@ -46,7 +46,7 @@ manifest:
     - name: zmk-feature-default-layer
       revision: codex/custom-rpc-rewrite
       import: true
-    - name: zmk-driver-animation
+#    - name: zmk-driver-animation
     - name: zmk-driver-ext-power-transient
     - name: zmk-module-ble-management
     - name: zmk-module-battery-history
