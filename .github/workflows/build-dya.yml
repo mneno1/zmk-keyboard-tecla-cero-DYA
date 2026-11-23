@@ -31,12 +31,13 @@ jobs:
       - name: Init
         run: |
           git config --global --add safe.directory ${{ github.workspace }}
-          west init -l config --mf west.yml
+          west init -l config --mf west-standalone.yml
           west update --narrow
           west zephyr-export
 
       - name: Debug west
         run: |
+          west topdir
           west list
 
 #      - name: Build
